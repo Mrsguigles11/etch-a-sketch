@@ -1,0 +1,18 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    width: 800px;
+    height: 800px;
+    display: flex;
+    border: solid;
+    flex-wrap: wrap;
+}
+
+#square {
+    flex: 1 1 auto;
+}
