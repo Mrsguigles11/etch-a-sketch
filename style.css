@@ -3,11 +3,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 
 .grid {
-    width: 800px;
-    height: 800px;
+    width: 700px;
+    height: 700px;
     display: flex;
     border: solid;
     flex-wrap: wrap;
