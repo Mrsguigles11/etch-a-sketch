@@ -1,11 +1,10 @@
 const grid = document.querySelector('.grid');
 const container = document.querySelector('.container');
+const newGrid = document.querySelector(".newGrid");
 
-let squaresRoot = 10;
-let squaresTotal = (squaresRoot * squaresRoot);
 
 function createSquare(num) {
-    for (let i = 0; i < squaresTotal; i++) {
+    for (let i = 0; i < (num * num); i++) {
         let div = document.createElement("div");
         div.setAttribute("id", "square");
         div.style.width = (700 / num) + 'px';
@@ -13,11 +12,10 @@ function createSquare(num) {
     }
 }
 
-createSquare(squaresRoot);
-
-let squares = document.querySelectorAll('#square');
+createSquare(4);
 
 function squareHover() {
+    let squares = document.querySelectorAll('#square');
     for (const square of squares) {
         square.addEventListener('mouseover', () => {
         square.style.backgroundColor = "black";
@@ -26,15 +24,11 @@ function squareHover() {
 squareHover();
 
 
-let newGrid = document.querySelector(".newGrid");
-
 newGrid.addEventListener('click', () => {
     let userNumber = Number(prompt("Choose a number to set the size of the new grid!"));
     while (grid.firstChild) {
         grid.removeChild(grid.lastChild);
     };
-    squaresTotal = (userNumber * userNumber);
     createSquare(userNumber);
-    squares = document.querySelectorAll('#square');
     squareHover();
 })
