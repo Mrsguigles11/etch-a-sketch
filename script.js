@@ -1,6 +1,7 @@
 const grid = document.querySelector('.grid');
 const container = document.querySelector('.container');
 const newGrid = document.querySelector(".newGrid");
+const reset = document.querySelector(".reset");
 
 
 function createSquare(num) {
@@ -26,7 +27,6 @@ squareHover();
 
 newGrid.addEventListener('click', () => {
     let userNumber = Number(prompt("Choose a number to set the size of the new grid!"));
-    console.log(userNumber);
 
     if (userNumber === 0) {
         return;
@@ -42,4 +42,11 @@ newGrid.addEventListener('click', () => {
     };
     createSquare(userNumber);
     squareHover();
+})
+
+reset.addEventListener('click', () => {
+    let squares = document.querySelectorAll('#square');
+    for (const square of squares) {
+        square.style.backgroundColor = "white";
+    }
 })
