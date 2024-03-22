@@ -19,8 +19,17 @@ function squareHover() {
     let squares = document.querySelectorAll('#square');
     for (const square of squares) {
         square.addEventListener('mouseover', () => {
-        square.style.backgroundColor = "black";
+        square.style.backgroundColor = randomColour();
 })} }
+
+function randomColour () {
+    let letters = "0123456789ABCDEF";
+    let colour = "#";
+    for (let i = 0; i < 6; i++) {
+        colour += letters[Math.floor(Math.random() * 16)];
+    }
+    return(colour);
+}
 
 squareHover();
 
