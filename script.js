@@ -32,10 +32,10 @@ newGrid.addEventListener('click', () => {
         return;
     }
 
-    do {
+    while (userNumber > 100) {
         alert("Please dont choose more than 100!");
         userNumber = Number(prompt("Choose a number to set the size of the new grid!"));
-    } while (userNumber > 100);
+    }
     
     while (grid.firstChild) {
         grid.removeChild(grid.lastChild);
