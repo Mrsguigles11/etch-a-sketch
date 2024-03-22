@@ -26,7 +26,12 @@ squareHover();
 
 newGrid.addEventListener('click', () => {
     let userNumber = Number(prompt("Choose a number to set the size of the new grid!"));
-    
+    console.log(userNumber);
+
+    if (userNumber === 0) {
+        return;
+    }
+
     do {
         alert("Please dont choose more than 100!");
         userNumber = Number(prompt("Choose a number to set the size of the new grid!"));
