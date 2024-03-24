@@ -1,9 +1,26 @@
-
+@font-face {
+    font-family: 'etch-a-sketch';
+    src: url('./EASTRIAL.otf');
+}
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+}
+
+.containerTwo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.redBox {
+    width: 900px;
+    background-color: rgb(202, 33, 33);
+    padding-top: 10px;
+    border-radius: 25px;
+    padding: 10px;
+
 }
 
 .grid {
@@ -12,8 +29,39 @@
     display: flex;
     border: solid;
     flex-wrap: wrap;
+    background-color: white;
+    position: relative;
+}
+
+.size {
+    position: absolute;
 }
 
 #square {
     flex: 1 1 auto;
+}
+
+.title {
+    font-family: 'etch-a-sketch';
+    font-size: 50px;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.reset {
+    font-family: 'etch-a-sketch';
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 25px;
+    width: 100px;
+    height: 90px;
+}
+
+.newGrid {
+    font-family: 'etch-a-sketch';
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 25px;
+    width: 100px;
+    height: 90px;
 }
