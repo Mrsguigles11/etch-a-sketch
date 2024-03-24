@@ -6,6 +6,10 @@ const reset = document.querySelector(".reset");
 
 
 function createSquare(num) {
+    let size = document.createElement("div");
+        size.classList.add("size");
+        grid.appendChild(size);
+        size.textContent = `${num} x ${num}`;
     for (let i = 0; i < (num * num); i++) {
         let div = document.createElement("div");
         div.setAttribute("id", "square");
