@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'etch-a-sketch';
-    src: url('./EASTRIAL.otf');
+    src: url('./fonts/eastrial-webfont.woff2');
+    src: url('./fonts/eastrial-webfont.woff');
 }
 .container {
     display: flex;
